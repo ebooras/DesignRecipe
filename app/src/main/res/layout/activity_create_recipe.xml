@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eliss.designrecipe.CreateRecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/recipeLabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Basics"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient1EditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cookbookEditText" />
+
+                <EditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Title..."
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/versionEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/versionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Version..."
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/cookbookEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
+
+                <EditText
+                    android:id="@+id/cookbookEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Cookbook..."
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredientsTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/versionEditText" />
+
+                <TextView
+                    android:id="@+id/ingredientsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Ingredients"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient1EditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cookbookEditText" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient1AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                        <EditText
+                            android:id="@+id/ingredient1EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 1"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient2AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient1EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient2EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 2"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient3EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient1EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient3AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient2EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient3EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 3"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient4EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient2EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient4AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient5EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient3EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient4EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 4"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient5EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient3EditText" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient5AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient6EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient4EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient5EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 5"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient6EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient4EditText" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient6AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient7EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient5EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient6EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 6"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient7EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient5EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient7AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient8EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient6EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient7EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 7"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient8EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient6EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient8AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient9EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient7EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient8EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 8"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient9EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient7EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient9AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient10EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient8EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient9EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 9"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/ingredient10EditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient8EditText" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/ingredient10AmountEditText"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/createRecipeButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient8EditText" />
+
+                        <EditText
+                            android:id="@+id/ingredient10EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Ingredient 10"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="#434343"
+                            app:layout_constraintBottom_toTopOf="@+id/createRecipeButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ingredient8EditText" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/methodTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Method"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient1EditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cookbookEditText" />
+
+                <EditText
+                    android:id="@+id/step1EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 1"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step2EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 2"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step3EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 3"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step4EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 4"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step5EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 5"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step6EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 6"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step7EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 7"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step8EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 8"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step9EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 9"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <EditText
+                    android:id="@+id/step10EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:hint="Step 10"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="#434343"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredient2EditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientsTextView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/returnHomeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@color/boringButtonGray"
+                        android:onClick="onHomeButtonClick"
+                        android:text="Home"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/createRecipeButton"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/createRecipeButton"
+                        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@color/create_recipe_background"
+                        android:onClick="onCreateButtonClick"
+                        android:text="Create!"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/returnHomeButton"
+                        app:layout_constraintTop_toBottomOf="@+id/createRecipeTextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

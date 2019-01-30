@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DesignRecipe</string>
+    <string-array name="recipe_version_menu">
+        <item>Version 1</item>
+        <item>Version 2</item>
+        <item>Version 3</item>
+    </string-array>
+</resources>
